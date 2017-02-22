@@ -39,7 +39,49 @@
           ]
         }
       ],
-      "tools":[]
+      "tools":[
+        {
+          "name": "avr-gcc",
+          "version": "4.8.1-arduino5",
+          "systems": [
+            {
+              "size": "24403768",
+              "checksum": "SHA-256:c8ffcd2db7a651b48ab4ea19db4b34fbae3e7f0210a0f294592af2bdabf2154b",
+              "host": "arm-linux-gnueabihf",
+              "archiveFileName": "avr-gcc-4.8.1-arduino5-armhf-pc-linux-gnu.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avr-gcc-4.8.1-arduino5-armhf-pc-linux-gnu.tar.bz2"
+            },
+            {
+              "size": "24437400",
+              "checksum": "SHA-256:111b3ef00d737d069eb237a8933406cbb928e4698689e24663cffef07688a901",
+              "host": "i386-apple-darwin11",
+              "archiveFileName": "avr-gcc-4.8.1-arduino5-i386-apple-darwin11.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avr-gcc-4.8.1-arduino5-i386-apple-darwin11.tar.bz2"
+            },
+            {
+              "size": "27093036",
+              "checksum": "SHA-256:9054fcc174397a419ba56c4ce1bfcbcad275a6a080cc144905acc9b0351ee9cc",
+              "host": "x86_64-linux-gnu",
+              "archiveFileName": "avr-gcc-4.8.1-arduino5-x86_64-pc-linux-gnu.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avr-gcc-4.8.1-arduino5-x86_64-pc-linux-gnu.tar.bz2"
+            },
+            {
+              "size": "25882375",
+              "checksum": "SHA-256:7648b7f549b37191da0b0be53bae791b652f82ac3cb4e7877f85075aaf32141f",
+              "host": "i686-linux-gnu",
+              "archiveFileName": "avr-gcc-4.8.1-arduino5-i686-pc-linux-gnu.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/avr-gcc-4.8.1-arduino5-i686-pc-linux-gnu.tar.bz2"
+            },
+            {
+              "size": "46044779",
+              "checksum": "SHA-256:d4303226a7b41d3c445d901b5aa5903458def3fc7b7ff4ffef37cabeb37d424d",
+              "host": "i686-mingw32",
+              "archiveFileName": "avr-gcc-4.8.1-arduino5-i686-mingw32.zip",
+              "url": "http://downloads.arduino.cc/tools/avr-gcc-4.8.1-arduino5-i686-mingw32.zip"
+            }
+          ]
+        }      
+      ]
     }
   ]
 }

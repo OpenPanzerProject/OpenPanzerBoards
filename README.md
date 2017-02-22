@@ -1,6 +1,6 @@
 # Open Panzer Package Lists for the Arduino Board Manager
 
-This branch contains the Arduino IDE Boards Manager installation support files, including the `package_*_index.json` file. custom package_openpanzer_index.json file that can be used to add new third party boards to the Arduino IDE. You probably don't need to download any of these files. 
+This branch contains the Arduino IDE Boards Manager installation support files. You probably don't need to download any of these. 
 
 ## Add Open Panzer Custom Board to Arduino IDE 
 To add Open Panzer boards to the Arduino IDE, open File->Settings and paste the following link into the `Additional Boards Manager URLs` box: 

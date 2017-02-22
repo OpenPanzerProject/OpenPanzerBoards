@@ -1,6 +1,4 @@
-# OpenPanzerBoards
-
-## Open Panzer Package Lists for the Arduino Board Manager
+# Open Panzer Package Lists for the Arduino Board Manager
 
 This repo contains the custom package_openpanzer_index.json file that can be used to add new third party boards to the Arduino IDE. 
 

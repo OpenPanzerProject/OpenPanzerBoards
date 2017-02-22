@@ -13,7 +13,7 @@
           "help": {
             "online": "http://forum.openpanzer.org"
           },
-          "url": "https://github.com/openpanzerproject/Arduino_Boards/raw/master/IDE_Board_Manager/openpanzer_avr-1.0.0.tar.bz2",
+          "url": "https://openpanzerproject.github.io/OpenPanzerBoards/packages/openpanzer_avr-1.0.0.tar.bz2",
           "checksum": "SHA-256:C5186AD14203D6DB8F4C5811226BC3586723378994764CEF770A4AC70FA29007",
           "archiveFileName": "openpanzer_avr-1.0.0.tar.bz2",
           "size": "23895",

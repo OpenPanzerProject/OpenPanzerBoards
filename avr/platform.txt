@@ -1,12 +1,32 @@
 
+# Open Panzer TCB Platform Configuration
+# --------------------------------------------------------------------------->>
+# This file is a copy of platform.txt from AVR Boards 1.6.11
+# That was the last platform file used with avr-gcc-4.8.1-arduino5, which is
+# the compiler v1.0.0 of the Open Panzer AVR board uses. 
+# 
+# For more on why we have no yet moved to avr-gcc-4.9.2 along with the rest of Arduino, see here: 
+# http://forum.arduino.cc/index.php?topic=453836
+#
+# For more on how our custom board package was created, see here: 
+# http://forum.arduino.cc/index.php?topic=457405
+#
+# The remainder of this fale save for the name/version are identical to platform.txt from AVR Boards 1.6.11
+# --------------------------------------------------------------------------->>
+
+
 # Arduino AVR Core and platform.
 # ------------------------------
 #
 # For more info:
 # https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5-3rd-party-Hardware-specification
 
-name=Arduino AVR Boards
-version=1.6.11
+# name=Arduino AVR Boards
+# version=1.6.11
+
+# Replace with our own project name/version
+name=Open Panzer AVR Boards
+version=1.0.0
 
 # AVR compile variables
 # ---------------------

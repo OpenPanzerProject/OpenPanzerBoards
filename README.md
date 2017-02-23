@@ -17,7 +17,7 @@ There may already be entries in this field, if so, just add the new URL separate
 
 Next close the Preferences window, then go to the **Tools** menu and select **Board > Boards Manager**. Once the Board Manager opens, click on the category drop down menu on the top left hand side of the window and select **Contributed** - or, just type Open Panzer into the search bar. When you find the Open Panzer Boards option, click on the **Install** button and wait for the process to complete. 
 
-![Boards Manager](http://openpanzer.org/images/github/boards/Preferences_JSON.png "Boards Manager")
+![Boards Manager](http://openpanzer.org/images/github/boards/BoardsManager.png "Boards Manager")
 
 Next, **quit and reopen the Arduino IDE** to ensure the new board packages are properly installed. You should now be able to select the new board listed in the **Tools->Board** menu.
 

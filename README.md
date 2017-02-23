@@ -1,8 +1,10 @@
 # Open Panzer Arduino Boards
 This repository contains configuration and other support files to use Open Panzer Arduino-compatible boards such as the TCB Mk1 with the Arduino IDE. 
 
+
 ## What these Files are For
 You shouldn't need anything in this repository unless you want to manually install the board package. Most people will be better served by using the built-in Boards Manager in the Arduino IDE as described below. But if for some reason you must do a manual install, scroll down to the bottom of this page for instructions. 
+
 
 ## Installing Open Panzer Board support in Arduino IDE
 To add board support for our products, open the Arduino IDE and go to **File > Preferences** (or if using OS X, go to Arduino > Preferences). A window will appear like the one shown below: 

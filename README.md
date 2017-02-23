@@ -26,7 +26,11 @@ Next, **quit and reopen the Arduino IDE** to ensure the new board packages are p
 Most people will want to install board support using Boards Manager in the IDE as described above. But if for some reason that is not an option for you (perhaps restrictive network settings), you can install the files manually. 
 
 1. Click the green **Clone or Download** button at the top of this page, then select **Download Zip**. 
-2. Unzip the downloaded file, then copy the **OpenPanzerBoards-master** folder to your Arduino sketch folder, in the hardware subfolder. Your sketchbook folder location can be found by looking in the Arduino IDE at File > Preferences > Sketchbook Location. If you don't see a hardware folder in there, create one. When you are done the folder should look like this: 
-{Arduino_Sketchbook_Folder\hardware\OpenPanzerBoards-master\
+2. Unzip the downloaded file, then copy the **OpenPanzerBoards-master** folder to your Arduino sketch folder, in the hardware subfolder. Your sketchbook folder location can be found by looking in the Arduino IDE at **File > Preferences > Sketchbook Location**. If you don't see a hardware folder in there, create one. When you are done the folder should look like this: 
+`{Arduino_Sketchbook_Folder}\hardware\OpenPanzerBoards-master\`
 3. Restart the Arduino IDE if it's running.
 4. Now go to **Tools->Board** in the Arduino IDE and the Open Pnazer board(s) should appear in the list. 
+
+
+## Creating Packages from Files
+Coming soon... a reminder to myself of what on earth I'm doing. 

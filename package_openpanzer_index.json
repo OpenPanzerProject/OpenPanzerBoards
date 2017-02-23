@@ -13,10 +13,10 @@
           "help": {
             "online": "http://forum.openpanzer.org"
           },
-          "url": "https://openpanzerproject.github.io/OpenPanzerBoards/packages/openpanzer_avr-1.0.0.tar.bz2",
-          "checksum": "SHA-256:C5186AD14203D6DB8F4C5811226BC3586723378994764CEF770A4AC70FA29007",
-          "archiveFileName": "openpanzer_avr-1.0.0.tar.bz2",
-          "size": "23895",
+          "url": "https://openpanzerproject.github.io/OpenPanzerBoards/packages/openpanzer-avr-v1.0.0.tar.bz2",
+          "checksum": "SHA-256:3E7FA23954B2F37BCDBFE1AF4334A138E08FE3E13B06EB1CD03D903FE6AFF55E",
+          "archiveFileName": "openpanzer-avr-v1.0.0.tar.bz2",
+          "size": "24840",
           "name": "Open Panzer AVR Boards",
           "version": "1.0.0",
           "architecture": "avr",

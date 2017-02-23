@@ -1,8 +1,10 @@
-# Open Panzer Boards
-Board definitions for all Open Panzer-designed AVR and ARM-based Arduino boards.
+# Open Panzer Arduino Boards
+This repository contains configuration and other support files to use Open Panzer Arduino-compatible boards such as the TCB Mk1 with the Arduino IDE. 
 
-## Installation Instructions
+## What these Files are For
+You shouldn't need anything in this repository unless you want to manually install the board package. Most people will not need to do this, instead you should use the built-in Boards Manager in the Arduino IDE as described below. If you must do a manual install, scroll down to the bottom of this page for instructions. 
 
+## Installing Open Panzer Board support in Arduino IDE
 To add board support for our products, open the Arduino IDE and go to **File > Preferences** (or if using OS X, go to Arduino > Preferences). A window will appear like the one shown below: 
 ![Add JSON to Preferences](http://openpanzer.org/images/github/boards/Preferences_JSON.png "Add JSON to Preferences")
 
@@ -15,7 +17,10 @@ Close the Preferences window, then go to the **Tools** menu and select **Board >
 
 ![Boards Manager](http://openpanzer.org/images/github/boards/Preferences_JSON.png "Boards Manager")
 
-
 Next, **quit and reopen the Arduino IDE** to ensure the new board packages are properly installed. You should now be able to select the new board listed in the **Tools->Board** menu.
 
 ![TCB Board shown in List](http://openpanzer.org/images/github/boards/BoardList.png "TCB Board shown in List")
+
+
+## Manual Board Package Installation
+Most people will want to install board support using Boards Manager in the IDE as described above. But if for some reason that is not an option for you (perhaps restrictive network settings), you can install the files manually. 

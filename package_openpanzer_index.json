@@ -37,6 +37,25 @@
               "name": "avrdude"
             }
           ]
+        },
+        {
+          "category": "Contributed",
+          "help": {
+            "online": "http://forum.openpanzer.org"
+          },
+          "url": "https://openpanzerproject.github.io/OpenPanzerBoards/packages/openpanzer-avr-v1.0.1.tar.bz2",
+          "checksum": "SHA-256:D1A94392365405CAA810826251664DC45CF23C94A48DFE48C35F45AD2BA92863",
+          "archiveFileName": "openpanzer-avr-v1.0.1.tar.bz2",
+          "size": "23222",
+          "name": "Open Panzer AVR Boards",
+          "version": "1.0.1",
+          "architecture": "avr",
+          "boards": [
+            {
+                "name": "TCB Mk1"
+            }
+          ],
+          "toolsDependencies": []
         }
       ],
       "tools":[

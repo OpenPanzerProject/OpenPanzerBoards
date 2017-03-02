@@ -1,0 +1,10 @@
+
+# Open Panzer TCB Platform Configuration
+# --------------------------------------------------------------------------->>
+# We are leaving it up to the IDE to decide what platform specifics to use,
+# but we still create this file so we can have the header name in the boards 
+# list (name value below)
+# --------------------------------------------------------------------------->>
+
+name=Open Panzer Boards
+

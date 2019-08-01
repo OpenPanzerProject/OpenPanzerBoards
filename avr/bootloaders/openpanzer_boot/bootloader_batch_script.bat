@@ -14,15 +14,16 @@ REM -
 REM ----------------------------------------------------------------------------------------------------------->>
 REM - Not having any spaces in the file name will save you infinite heartache. 
 REM - You also for sure don't want any parentheses in the file name either, AVRDUDE will croak for sure if it sees those
+REM - Best also not to use any quotation marks! 
 
 REM - Path to avrdude.conf file: 
-set conf_file=C:\Arduino\hardware\tools\avr\etc\avrdude.conf
+set conf_file=C:\openpanzer_boot\avrdude\avrdude.conf
 
 REM - Path to avrdude.exe
-set avrdude_exe=C:\Arduino\hardware\tools\avr\bin\avrdude.exe
+set avrdude_exe=C:\openpanzer_boot\avrdude\avrdude.exe
 
 REM - Path to bootloader hex
-set boot_hex=C:\TCBBootloader\optcb2560_boot.hex
+set boot_hex=C:\openpanzer_boot\optcb2560_boot.hex
 
 
 

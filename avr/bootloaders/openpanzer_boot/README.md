@@ -4,7 +4,7 @@ This folder contains the custom bootloader used on the TCB - both a precompiled 
 
 ## Do I Need to Do Anything With This? 
 
-Probably not, the bootloader should already come installed on your TCB from the factory. But if you are a developer, are curious, or for some reason need to re-write the bootloader on your device, read one. 
+Probably not, the bootloader should already come installed on your TCB from the factory. But if you are a developer, are curious, or for some reason need to re-write the bootloader on your device, read on. 
 
 ## Bootloader Details
 
@@ -60,7 +60,7 @@ Note that we are referencing `avrdude.conf` which is a configuration file avrdud
 
 Now to flash the bootloader, run this command:
 
-`avrdude -C "YourDrive:\YourArduino_Dir\hardware\tools\avr\etc\avrdude.conf" -p atmega2560 -c usbasp -P usb -v -U flash:w:YourDrive:\PathToBootloader\optcb2560_boot.hex:i -U lock:w:0xOF:m`
+`avrdude -C "YourDrive:\YourArduino_Dir\hardware\tools\avr\etc\avrdude.conf" -p atmega2560 -c usbasp -P usb -v -U flash:w:YourDrive:\PathToBootloader\optcb2560_boot.hex:i -U lock:w:0x0F:m`
 
 Where again you need to specify the actual path to the conf file, your specific programmer, and the actual path to the `optcb2560_boot.hex` file. 
 

@@ -34,16 +34,23 @@ The first command will clear the old hex, the second command will compile a new 
 
 
 ## Re-Flashing the Bootloader
-To flash the bootloader to your chip you will need a special programmer device. The USBasp is a good one and available for only a few bucks all over eBay. The special programmer will come with a dual-row, six pin plug. The TCB has a matching six-pin header footprint that is not populated from the factory, you will have to solder headers to it or use something like the [SparkFun ISP Pogo Adapter](https://www.sparkfun.com/products/11591). 
+To flash the bootloader to your chip you will need a special programming device. The USBasp is a good one and available for only a few bucks all over eBay, but there are others to choose from. The AVRISP mkII is another common programmer (more expensive).
 
-Plug your programmer into a USB port on your computer. Plug the ISP cable into the TCB. The programmer will not supply power to the TCB so you will also need to connect a battery. 
+The special programmer will come with a dual-row, six pin plug. The TCB has a matching six-pin header footprint that is not populated from the factory, you will have to solder headers to it or even more convenient use something like the [SparkFun ISP Pogo Adapter](https://www.sparkfun.com/products/11591). 
+
+Plug your programmer into a USB port on your computer. Plug the ISP cable into the TCB. The programmer will not supply power to the TCB so you will also need to either connect a battery to the TCB or power it via USB. 
 
 You can then flash the bootloader using one of two methods: 
 
 ### 1. Using the Arduino IDE
-Make sure the bootloader hex file is in the `openpanzer_boot` directory of the Arduino bootloaders folder, something like: `C:\Arduino\hardware\arduino\avr\bootloaders\openpanzer_boot\optcb2560_boot.hex`. 
+See this page for instructions on [Installing Open Panzer Board support in Arduino IDE](https://github.com/OpenPanzerProject/OpenPanzerBoards). 
 
-Also make sure you have updated the Arduino `boards.txt` file to add information for the TCB board ([see the README for the TCB repo](https://github.com/OpenPanzerProject/TCB) for a description). Then in the Arduino IDE, go to the Tools menu, select "Open Panzer TCB (Mega 2560)" as the board, select the appropriate programmer from the Programmer list, then click "Burn Bootloader." 
+When that is done, close the IDE and then re-open it for the changes to take effect. Next, go to the Tools menu, select "Open Panzer TCB (Mega 2560)" as the board (you may have to scroll down the list to find it). Also in the Tools menu select the appropriate programmer from the Programmer list (USBasp, AVRISP mkII or whatever programming device you have). 
+
+Plug whatever programming device you are using into the computer. Apply power to the TCB either with a battery or through the USB connector. Then with your programming device firmly connected to the six-pin ISP header on the TCB, click "Burn Bootloader" in the IDE (also in the Tools menu). The correct bootloader should now be installed. To confirm, the red LED on the TCB will blink slowly. 
+
+At this point you only have the bootloader, no running firmware. So next you will want to flash the latest firmware to the TCB (this can be done over the USB connection, it does not require the programming device). 
+
 (Note: recent versions of the IDE seem to be having an issue programming with the AVR ISP Mk1 programer, if you happen to be using one of those. Best to get a USBasp.)
 
 ### 2. Using AVRDUDE from the Command Line

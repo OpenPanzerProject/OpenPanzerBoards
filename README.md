@@ -23,17 +23,4 @@ Next, **quit and reopen the Arduino IDE** to ensure the new board packages are p
 
 ![TCB Board shown in List](http://openpanzer.org/images/github/boards/BoardList.png "TCB Board shown in List")
    
-   
-## Manual Board Package Installation
-Most people will want to install board support using Boards Manager in the IDE as described above. But if for some reason that is not an option, you can install the files manually.  
-
-1. Click the green **Clone or download** button at the [top of this page](https://github.com/OpenPanzerProject/OpenPanzerBoards), then select **Download ZIP**. 
-![Download Zip](http://openpanzer.org/images/github/boards/CloneOrDownload.png "Download Zip")
-2. Unzip the downloaded file, then copy the **OpenPanzerBoards-master** folder to your Arduino sketch folder, in the hardware subfolder. Your sketchbook folder location can be found by looking in the Arduino IDE at **File > Preferences > Sketchbook Location**. If you don't see a hardware folder in there, create one. When you are done the folder should look like this: 
-`{Arduino_Sketchbook_Folder}\hardware\OpenPanzerBoards-master\`
-3. Restart the Arduino IDE if it's running.
-4. Now go to **Tools->Board** in the Arduino IDE and the Open Panzer board(s) should appear in the list. 
-   
-   
-## Creating Packages from Files
-Coming soon... a reminder to myself of what on earth I'm doing.   
+ 

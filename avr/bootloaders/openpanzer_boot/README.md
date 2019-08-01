@@ -51,32 +51,40 @@ Plug whatever programming device you are using into the computer. Apply power to
 
 At this point you only have the bootloader, no running firmware. So next you will want to flash the latest firmware to the TCB (this can be done over the USB connection, it does not require the programming device). 
 
-(Note: recent versions of the IDE seem to be having an issue programming with the AVR ISP Mk1 programer, if you happen to be using one of those. Best to get a USBasp.)
-
 ### 2. Using AVRDUDE from the Command Line
-Avrdude is the program Arduino uses to write to ATmega chips, but you can use it directly from the command line as well. 
+Avrdude is the program Arduino uses to write to ATmega chips, but you can use it directly from the command line as well. You will need three files: avrdude.exe, avrdude.conf, and optcb2560_boot.hex
 
-Open a command prompt and browse to the following folder in the Arduino installation directory, where `avrdude.exe` should reside:
-`Arduino_Dir\hardware\tools\avr\bin\`
+Copies of all these files are included in this folder, but you can also get the most recent versions of the avrdude files from your Arduino installation directory if you have the IDE installed. They will be located here: 
+`Your_Arduino_Install_Dir\hardware\tools\avr\bin\avrdude.exe`
+`Your_Arduino_Install_Dir\hardware\tools\avr\etc\avrdude.conf`
 
-Then run the following commands. This first one 1) erases the existing program memory, 2) unlocks the bootloader section so we can access it in step two, and 3) it sets the three fuse bits to the correct values:
+It will probably be easier to move all these files into a single folder in the root of some drive, such as: 
+`C:\openpanzer_boot\avrdude.exe`
+`C:\openpanzer_boot\avrdude.conf`
+`C:\openpanzer_boot\optcb2560_boot.hex`
 
-`avrdude -C "YourDrive:\YourArduino_Dir\hardware\tools\avr\etc\avrdude.conf" -p atmega2560 -c usbasp -P usb -v -e -U lock:w:0x3F:m -U efuse:w:0xFD:m -U hfuse:w:0xDA:m -U lfuse:w:0xF7:m`
+Now as with the first method you still need the special programming device (USBasp, AVRISP mkII, etc). Plug this device into your computer. Apply power to the TCB either with a battery or through the USB connector. Then attach your programming device firmly to the six-pin ISP header on the TCB.
 
-Note that we are referencing `avrdude.conf` which is a configuration file avrdude needs to know about, and should already exist in your Arduino install directory as shown in the command above. Also if you are using a programmer other than the USBasp you will need to change the `-c` flag, for a list of supported avrdude programmers see [this link](http://www.nongnu.org/avrdude/user-manual/avrdude_4.html) or type `avrdude -c ?` 
+Open a Windows command prompt and browse to the folder that contains your files. Then run the following commands. This first command will 1) erase the existing program memory, 2) unlock the bootloader section so we can access it in step two, and 3) set the three fuse bits to the correct values. 
 
-Now to flash the bootloader, run this command:
+`avrdude -C avrdude.conf -p atmega2560 -c usbasp -P usb -v -e -U lock:w:0x3F:m -U efuse:w:0xFD:m -U hfuse:w:0xDA:m -U lfuse:w:0xF7:m`
 
-`avrdude -C "YourDrive:\YourArduino_Dir\hardware\tools\avr\etc\avrdude.conf" -p atmega2560 -c usbasp -P usb -v -U flash:w:YourDrive:\PathToBootloader\optcb2560_boot.hex:i -U lock:w:0x0F:m`
+Note this command references `usbasp` as the programming device. If you are using a different programmer you will need to change the `-c` flag to match. For a list of supported avrdude programmers see [this link](http://www.nongnu.org/avrdude/user-manual/avrdude_4.html) or type `avrdude -c ?` 
 
-Where again you need to specify the actual path to the conf file, your specific programmer, and the actual path to the `optcb2560_boot.hex` file. 
+Now that we have set the correct fuse bits for writing the bootloader, run this second command:
 
-#### Tips
+`avrdude -C avrdude.conf -p atmega2560 -c usbasp -P usb -v -U flash:w:optcb2560_boot.hex:i -U lock:w:0x0F:m`
+
+Where again you need to specify the correct programmer if you are not using the USBasp. 
+
+The correct bootloader should now be installed. To confirm, the red LED on the TCB will blink slowly. 
+
+If you are going to be doing a lot of flashing it can be useful to put these commands into a Windows batch file. A sample one is included in this folder (`bootloader_batch_script.bat`). You will first need to edit the bat file in a text editor such as Notepad (but we like [Programmer's Notepad](http://www.pnotepad.org/) better!). The file is well commented, all you need to do is set the paths to the three files described above, as well as the name of the programming device you will be using. Save and close the file, then all you need to do is double-click the batch file in Windows Explorer and it will execute. This saves you typing long commands at the command prompt. 
+
+#### Bootloader Flashing Troubleshooting
+Many errors such as messages that the programmer could not be found, or that it didn't responsd correctly, or the cryptic Windows error: "The application was unable to start correctly (0xc000007b)" are due to the lack of a driver or an incorrect driver for your programming device. The best way to resolve these is to download the free [Zadig program](https://zadig.akeo.ie/). It is a standalone exe. Run the program, and with your programmer plugged into the computer, go to the Options menu and select "List All Devices." Find your programmer device in the drop-down menu (USBasp or whatever), and then install the `libusb-win32` driver. If you still have problems you can try afterwards switching to the `libusbK` driver. 
+
+#### Important Lesson Learned the Hard Way
 Avrdude doesn't like spaces in file names and for sure will croak if there is a parentheses in the path, such as there will be if you install Arduino on a 64-bit Windows OS (ie, "C:\Program Files (x86)\etc..")
 
 So save yourself some hassle and install Arduino into a clean folder like "C:\Arduino\"
-
-If you are going to be doing a lot of flashing it can be useful to put these commands into a Windows batch file. A sample one is included in this folder. You will first need to edit it in a text editor such as Notepad (but we like [Programmer's Notepad](http://www.pnotepad.org/) better!), and set the paths to the actual ones you will be using. Then you can simply double-click the batch file in Windows and it will execute. 
-
-
-

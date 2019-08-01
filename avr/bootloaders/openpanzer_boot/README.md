@@ -8,7 +8,7 @@ Probably not, the bootloader should already come installed on your TCB from the 
 
 ## Bootloader Details
 
-This bootloader is a modification of the standard Arduino stk500boot bootloader used for the Mega boards. It was first modified by [Arduino Forum user Krupski](http://forum.arduino.cc/index.php?topic=309467.0) who removed the bulky and largely-unused Monitor utility and reduced the overall size of the bootloader to roughly 2kB. 
+This bootloader is a modification of the standard Arduino stk500boot bootloader used for the Mega boards. It was first modified by [Arduino Forum user Krupski](http://forum.arduino.cc/index.php?topic=309467.0) who removed the bulky and largely-unused Monitor utility and reduced the overall size of the bootloader to roughly 2KB. 
 
 The Open Panzer project subsequently modified it further for our own purposes. The primary change is the ability to select which serial port you want to flash the chip when writing new firmware. This is done by the position of Dipswitch #5 on the TCB. 
 

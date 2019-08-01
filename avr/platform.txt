@@ -4,7 +4,12 @@
 # We are leaving it up to the IDE to decide what platform specifics to use,
 # but we still create this file so we can have the header name in the boards 
 # list (name value below)
+# See also this useful thread: 
+# https://forum.arduino.cc/index.php?topic=457405.msg4260721#msg4260721
 # --------------------------------------------------------------------------->>
 
 name=Open Panzer Boards
-version=1.0.3
+version=1.0.4
+
+preproc.macros.flags=-w -x c++ -E -CC
+recipe.preproc.macros="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {preproc.macros.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{preprocessed_file_path}"

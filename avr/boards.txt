@@ -10,7 +10,7 @@
 
 optcb2560.name=Open Panzer TCB (Mega 2560)
 
-optcb2560.bootloader.tool=avrdude
+optcb2560.bootloader.tool=arduino:avrdude
 optcb2560.bootloader.extended_fuses=0xFD
 optcb2560.bootloader.high_fuses=0xDA
 optcb2560.bootloader.low_fuses=0xF7
@@ -20,13 +20,13 @@ optcb2560.bootloader.file=openpanzer_boot/optcb2560_boot.hex
 
 optcb2560.build.mcu=atmega2560
 optcb2560.build.f_cpu=16000000L
-optcb2560.build.core=arduino
-optcb2560.build.variant=mega
+optcb2560.build.core=arduino:arduino
+optcb2560.build.variant=arduino:mega
 optcb2560.build.board=AVR_MEGA2560
 
 optcb2560.upload.protocol=wiring
 optcb2560.upload.maximum_size=258048
 optcb2560.upload.maximum_data_size=8192
 optcb2560.upload.speed=115200
-optcb2560.upload.tool=avrdude
+optcb2560.upload.tool=arduino:avrdude
 

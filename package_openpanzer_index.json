@@ -18,9 +18,9 @@
              "online": "http://forum.openpanzer.org"
            },
            "url": "https://openpanzerproject.github.io/OpenPanzerBoards/packages/openpanzer-avr-v1.0.4.tar.bz2",
-           "checksum": "SHA-256:0CF16460D8F7C7AE3480C234BB1BF9C20EB3BCEAFC380F4847A83ADF2825B333",
+           "checksum": "SHA-256:F5144B33DFB143C598A0860415DDF3994A7678CF111DB268AC4E30C9104E2BF7",
            "archiveFileName": "openpanzer-avr-v1.0.4.tar.bz2",
-           "size": "23613",
+           "size": "3709",
            "name": "Open Panzer AVR Boards",
            "version": "1.0.4",
            "architecture": "avr",

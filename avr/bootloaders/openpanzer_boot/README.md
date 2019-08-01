@@ -60,7 +60,7 @@ Note that we are referencing `avrdude.conf` which is a configuration file avrdud
 
 Now to flash the bootloader, run this command:
 
-`avrdude -C "YourDrive:\YourArduino_Dir\hardware\tools\avr\etc\avrdude.conf" -p atmega2560 -c usbasp -P usb -v -U flash:w:YourDrive:\PathToBootloader\optcb2560_boot.hex:i -U lock:w:0xOF:m`
+`avrdude -C "YourDrive:\YourArduino_Dir\hardware\tools\avr\etc\avrdude.conf" -p atmega2560 -c usbasp -P usb -v -U flash:w:YourDrive:\PathToBootloader\optcb2560_boot.hex:i -U lock:w:0x0F:m`
 
 Where again you need to specify the actual path to the conf file, your specific programmer, and the actual path to the `optcb2560_boot.hex` file. 
 
